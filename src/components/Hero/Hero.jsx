@@ -15,7 +15,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className={styles.heroImageWrapper}>
-                    <img src="../public/yogur.png" alt="Banner" className={styles.heroImage} />
+                    <img src="/yogur.png" alt="Banner" className={styles.heroImage} />
                 </div>
             </div>
         </section>
