@@ -1,12 +1,12 @@
 import styles from './Nav.module.css';
+import { Link } from 'react-router-dom';
 import FavoritesSection from '../FavoritesSection/FavoritesSection';
 import CategoriesMenu from '../CategoriesMenu/CategoriesMenu';
-
 
 const Nav = () => {
     return (
         <nav className={`container ${styles.headerBottom}`}>
-        <FavoritesSection />
+            <FavoritesSection />
             {/*central navigation menu*/}
             {/*<button className={styles.menuOpenButton}>
                 <FontAwesomeIcon icon={faBars} />
@@ -14,20 +14,14 @@ const Nav = () => {
             <ul className={styles.navHeader}>
                 <CategoriesMenu />
                 <li>
-                    <a href="#home" >Home</a>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <a href="#products" >Offers</a>
+                    <Link to="/offers">Offers</Link>
                 </li>
-                <li>
-                    <a href="#reviews" >Reviews</a>
-                </li>
-                <li>
-                    <a href="#contact" >Contact us</a>
-                </li>
-                <li>
-                    <a href="#about" >About us</a>
-                </li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#about">About us</a></li>
             </ul>
         </nav>
     );

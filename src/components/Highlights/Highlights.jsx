@@ -6,9 +6,12 @@ const Highlights = () => {
     const [buttonHighlight, setButtonHighlight] = useState("topSellers");
 
     return (
-
-
-
+        <section>
+            <h2> Highlights </h2>
+            <div className={style.optionsContainer}>
+                <button></button>
+            </div>  
+        </section>    
     );
-    
+
 }
