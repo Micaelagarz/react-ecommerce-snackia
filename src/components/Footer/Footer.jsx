@@ -44,19 +44,19 @@ function Footer() {
                     </ul>
                 </div>
                 <div className={styles.teamSection}>
-                    <h4>Nuestro Equipo</h4>
+                    <h4>Our team</h4>
                     <div className={styles.cardsContainer}>
                         <div className={styles.personCard}>
                             <b>Lucía Gómez</b>
-                            <p>Fundadora</p>
+                            <p>Founder</p>
                         </div>
                         <div className={styles.personCard}>
                             <b>Carlos Pérez</b>
-                            <p>Logística</p>
+                            <p>Logistics</p>
                         </div>
                         <div className={styles.personCard}>
                             <b>Ana Martínez</b>
-                            <p>Soporte</p>
+                            <p>Support</p>
                         </div>
                     </div>
                 </div>
