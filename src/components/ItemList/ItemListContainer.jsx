@@ -9,18 +9,27 @@ const ItemListContainer = ({ Message }) => {
     // 2. if the products are loading, the loading state is set to true, and a loading mesagge or spinner is displayed.
     // 3. Once loading is finished, the loading state is set to false, and the products are displayed.
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     // 4. Use effect for load the products
     useEffect(() => {
 
         fetch('/data/products.json')
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('The products could not be loaded.');
+                }
+                return response.json();
+            })
             .then((data) => {
                 setProducts(data);
-                setLoading(false);
             })
-            .catch((error) =>
-                console.error("Error loading the products.", error));
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     //5. While the fetch does its job, we display something temporary. 
