@@ -7,7 +7,6 @@ const Home = () => {
             <Hero />
             <section className={styles.offersSection}>
                 <div className={styles.offersGrid}>
-
                 </div>
             </section>
         </div>

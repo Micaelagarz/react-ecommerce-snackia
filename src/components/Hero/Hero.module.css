@@ -1,16 +1,16 @@
-.heroSection{
+.heroSection {
     background-color: var(--primary-color);
 }
 
-.heroContainer{
+.heroContainer {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    padding-bottom: 5rem;
     color: var(--background-color);
     flex-direction: row;
 }
 
-.heroContent h1{
+.heroContent h1 {
     font-size: 5rem;
     color: var(--yellow-color);
     font-family: 'Dancing Script', sans-serif;
@@ -23,7 +23,7 @@
     font-size: 3rem;
     font-weight: 700;
     color: var(--white-color);
-    line-height:1.15;
+    line-height: 1.15;
 }
 
 .heroDescription {
@@ -32,10 +32,10 @@
     font-size: 2rem;
     font-weight: 400;
     color: var(--white-color);
-    line-height:1.15;
+    line-height: 1.15;
 }
 
-.heroButtons{
+.heroButtons {
     display: flex;
     gap: 2.3rem;
     align-items: center;
@@ -65,9 +65,7 @@
     background: var(--yellow-color);
 }
 
-.heroImageWrapper{
+.heroImageWrapper {
     max-width: 50rem;
     min-width: 20rem;
-    margin-right: 3rem;
 }
-

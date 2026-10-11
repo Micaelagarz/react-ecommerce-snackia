@@ -1,7 +1,6 @@
-import './index.css';
 import { Layout } from './components/Layout';
 import Home from './components/Home/Home'
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/ItemList/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/productos" element={<ItemListContainer />} />
+          <Route path="/offers" element={<ItemListContainer />} />
         </Routes>
       </Layout>
     </BrowserRouter>

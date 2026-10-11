@@ -11,9 +11,9 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -31,10 +31,9 @@ html {
 }
 
 .container {
-  width: min(160rem, 90%);
+  width: min(120rem, 90%);
   margin: 0 auto;
 }
-/*agregado*/
 
 img {
   width: 100%;
@@ -54,23 +53,16 @@ main {
   background-color: var(--background-color);
 }
 
-input,
-button{
-  background: transparent; 
-  border: none;             
-  outline: none;           
+button {
+  background: transparent;
+  border: none;
   cursor: pointer;
 }
 
-h2 {
-  text-align: center;
-  font-size: 5rem;
-  font-weight: 500;
+input {
+  border: none;
 }
 
-.iconAngle {
-  padding: 0 1rem;
-  font-size: 1.5rem;
-  color: var(--gray-medium-color);
-  cursor: pointer;
+input:focus {
+  outline: 3px solid var(--secondary-color);
 }

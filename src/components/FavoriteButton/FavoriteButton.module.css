@@ -1,0 +1,10 @@
+.buttonFav {
+    position: absolute;
+    z-index: 1;
+}
+
+.buttonFav button {
+    border-radius: 2rem;
+    font-size: 3rem;
+    color: var(--primary-color);
+}

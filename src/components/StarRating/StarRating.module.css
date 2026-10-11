@@ -1,0 +1,15 @@
+.starsContainer {
+    margin-bottom: 0.5rem;
+}
+
+.star {
+    font-size: 2rem;
+    color: var(--yellow-color);
+}
+
+.countText {
+    font-size: 1.2rem;
+    color: gray;
+    margin-left: 1rem;
+
+}

@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "title": "Almonds 100g",
+        "price": 13.50,
+        "rating": 5,
+        "stock": 18,
+        "highlightTag": "onSale",
+        "category": "nuts",
+        "thumbnail": "/data/images/almendras.jpg",
+        "description": "blablablablablabla",
+        "reviews": [
+            {
+                "rating": 5,
+                "comment": "Excellent quality and super fresh!",
+                "date": "2026-05-18",
+                "reviewerName": "Lucía Gómez"
+            },
+            {
+                "rating": 4,
+                "comment": "Great value for the price, will buy again.",
+                "date": "2026-07-22",
+                "reviewerName": "Mark Johnson"
+            },
+            {
+                "rating": 5,
+                "comment": "Perfect snack for the afternoon.",
+                "date": "2026-09-05",
+                "reviewerName": "Sarah Lee"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Gluten-Free Cookies 150g",
+        "price": 8.25,
+        "rating": 4,
+        "stock": 15,
+        "highlightTag": "onSale",
+        "category": "groceries",
+        "thumbnail": "/data/images/galletitas.jpg",
+        "description": "blablablablablabla",
+        "reviews": [
+            {
+                "rating": 4,
+                "comment": "Very good cookies, perfect to share with some tea.",
+                "date": "2025-06-02",
+                "reviewerName": "Marta Benitez"
+            },
+            {
+                "rating": 5,
+                "comment": "My kids absolutely love these!",
+                "date": "2026-02-14",
+                "reviewerName": "Emily Davis"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Peanut Butter 380g",
+        "price": 14.50,
+        "rating": 5,
+        "stock": 10,
+        "highlightTag": "onSale",
+        "category": "spreads",
+        "thumbnail": "/data/images/pasta_mani.jpg",
+        "description": "blablablablablabla",
+        "reviews": [
+            {
+                "rating": 5,
+                "comment": "The best peanut butter I've ever had.",
+                "date": "2026-03-24",
+                "reviewerName": "Sergio Oller"
+            },
+            {
+                "rating": 5,
+                "comment": "Very creamy and no added sugar, just perfect.",
+                "date": "2026-05-12",
+                "reviewerName": "Jessica Brown"
+            },
+            {
+                "rating": 4,
+                "comment": "Tastes amazing, but the jar arrived a bit dented.",
+                "date": "2026-10-02",
+                "reviewerName": "David Miller"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Shelled Walnuts 200g",
+        "price": 18.25,
+        "rating": 3,
+        "stock": 25,
+        "highlightTag": "topSellers",
+        "category": "nuts",
+        "thumbnail": "/data/images/nueces_peladas.jpg",
+        "description": "Light walnut halves with a mild flavor.",
+        "reviews": [
+            {
+                "rating": 5,
+                "comment": "Very fresh, I always buy them.",
+                "date": "2026-04-10",
+                "reviewerName": "Carlos Pérez"
+            },
+            {
+                "rating": 4,
+                "comment": "Great for baking and adding to brownies.",
+                "date": "2026-06-15",
+                "reviewerName": "Anna Smith"
+            },
+            {
+                "rating": 4,
+                "comment": "Some pieces were broken, but the flavor is top notch.",
+                "date": "2026-09-20",
+                "reviewerName": "Robert Taylor"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Seed Mix 100g",
+        "price": 11.50,
+        "rating": 5,
+        "stock": 30,
+        "highlightTag": "topSellers",
+        "category": "groceries",
+        "thumbnail": "/data/images/mix_semillas.jpg",
+        "description": "Mix of chia, flax, sesame, and sunflower seeds.",
+        "reviews": [
+            {
+                "rating": 5,
+                "comment": "Delicious to add to yogurt or salads.",
+                "date": "2026-01-15",
+                "reviewerName": "Ana Martínez"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Roasted Cashews 100g",
+        "price": 21.25,
+        "rating": 5,
+        "stock": 8,
+        "highlightTag": "newArrivals",
+        "category": "nuts",
+        "thumbnail": "/data/images/castañas_caju.jpg",
+        "description": "Roasted cashews with no added salt.",
+        "reviews": [
+            {
+                "rating": 5,
+                "comment": "Unmissable new arrival, some of the best I've tried.",
+                "date": "2026-08-01",
+                "reviewerName": "Rocío Fernández"
+            },
+            {
+                "rating": 5,
+                "comment": "Very filling and crunchy. Highly recommended.",
+                "date": "2026-09-10",
+                "reviewerName": "Daniel Garcia"
+            }
+        ]
+    }
+]

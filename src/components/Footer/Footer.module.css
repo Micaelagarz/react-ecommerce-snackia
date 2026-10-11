@@ -1,13 +1,13 @@
-footer{
+footer {
     background-color: var(--primary-color);
-    
+
 }
 
 .footerTop {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 10rem;
+    padding: 1.5rem 0;
     border-bottom: 0.1rem solid var(--secondary-color);
 }
 
@@ -29,7 +29,7 @@ footer{
     letter-spacing: -0.1rem;
 }
 
-.socials{
+.socials {
     display: flex;
     gap: 2rem;
 }
@@ -49,10 +49,10 @@ footer{
 .footerBottom {
     display: flex;
     justify-content: center;
-    align-items: center;     
+    align-items: center;
     padding: 2rem 0;
     gap: 10%;
-    
+
 }
 
 .footerBottom h4 {
