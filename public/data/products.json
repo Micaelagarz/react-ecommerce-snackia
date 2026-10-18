@@ -7,7 +7,7 @@
         "stock": 18,
         "highlightTag": "onSale",
         "category": "nuts",
-        "thumbnail": "/data/images/almendras.jpg",
+        "thumbnail": "/images/products/almendras.jpg",
         "description": "blablablablablabla",
         "reviews": [
             {
@@ -38,7 +38,7 @@
         "stock": 15,
         "highlightTag": "onSale",
         "category": "groceries",
-        "thumbnail": "/data/images/galletitas.jpg",
+        "thumbnail": "/images/products/galletitas.jpg",
         "description": "blablablablablabla",
         "reviews": [
             {
@@ -63,7 +63,7 @@
         "stock": 10,
         "highlightTag": "onSale",
         "category": "spreads",
-        "thumbnail": "/data/images/pasta_mani.jpg",
+        "thumbnail": "/images/products/pasta_mani.jpg",
         "description": "blablablablablabla",
         "reviews": [
             {
@@ -94,7 +94,7 @@
         "stock": 25,
         "highlightTag": "topSellers",
         "category": "nuts",
-        "thumbnail": "/data/images/nueces_peladas.jpg",
+        "thumbnail": "/images/products/nueces_peladas.jpg",
         "description": "Light walnut halves with a mild flavor.",
         "reviews": [
             {
@@ -125,7 +125,7 @@
         "stock": 30,
         "highlightTag": "topSellers",
         "category": "groceries",
-        "thumbnail": "/data/images/mix_semillas.jpg",
+        "thumbnail": "/images/products/mix_semillas.jpg",
         "description": "Mix of chia, flax, sesame, and sunflower seeds.",
         "reviews": [
             {
@@ -144,7 +144,7 @@
         "stock": 8,
         "highlightTag": "newArrivals",
         "category": "nuts",
-        "thumbnail": "/data/images/castañas_caju.jpg",
+        "thumbnail": "/images/products/castañas_caju.jpg",
         "description": "Roasted cashews with no added salt.",
         "reviews": [
             {

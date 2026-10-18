@@ -2,9 +2,11 @@ import Item from "./Item";
 import styles from "./ItemList.module.css";
 import Container from "../Container";
 
+
 const ItemList = ({ products }) => {
     return (
         //This div handles the grid.
+
         <Container>
             <div className={styles.catalogGrid}>
 
@@ -18,6 +20,8 @@ const ItemList = ({ products }) => {
 
             </div>
         </Container>
+
+
     );
 }
 
