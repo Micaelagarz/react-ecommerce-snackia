@@ -1,7 +1,9 @@
 import ItemList from "./ItemList";
+import Container from "../Container";
 import { useState, useEffect } from "react";
+import PageHeader from "../PageHeader/PageHeader";
 
-const ItemListContainer = ({ Message }) => {
+const ItemListContainer = () => {
 
     // 1. Status for storing the products and another to indicate if it is loading.
     const [products, setProducts] = useState([]);
@@ -37,12 +39,21 @@ const ItemListContainer = ({ Message }) => {
         return <h2>Loading the Snackia catalog...</h2>
     }
 
+    if (error) {
+        return <p>Error: {error}</p>
+    }
+
     //6. Once we have the data, we map it out and delegate to the exhibitor.
     return (
         <div>
-            <h2>{Message}</h2>
+
+            <Container>
+                <PageHeader title="Offers" />
+            </Container>
+
             {/* 7. It passes the entire array to the organizer. */}
             <ItemList products={products} />
+
         </div>
     );
 }

@@ -1,0 +1,13 @@
+.headerContainer {
+    /* El primer valor (4rem) aplica para arriba y abajo, el segundo (0) para los lados */
+    padding: 2rem 0;
+
+    /* Opcional: Si necesitas que el texto esté alineado con el resto de tu contenido, 
+     puedes agregar un max-width o padding lateral igual al de tu <Container> */
+}
+
+.headerContainer h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black-color);
+}

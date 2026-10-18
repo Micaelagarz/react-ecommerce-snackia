@@ -1,11 +1,20 @@
 .heroSection {
-    background-color: var(--primary-color);
+    background: linear-gradient(180deg,
+            var(--primary-color) 0%,
+            var(--primary-color) 66%,
+            color-mix(in srgb, var(--primary-color) 94%, var(--background-color)) 72%,
+            color-mix(in srgb, var(--primary-color) 78%, var(--background-color)) 78%,
+            color-mix(in srgb, var(--primary-color) 52%, var(--background-color)) 84%,
+            color-mix(in srgb, var(--primary-color) 28%, var(--background-color)) 90%,
+            color-mix(in srgb, var(--primary-color) 10%, var(--background-color)) 95%,
+            color-mix(in srgb, var(--primary-color) 2%, var(--background-color)) 98%,
+            var(--background-color) 100%);
 }
 
 .heroContainer {
     display: flex;
     align-items: center;
-    padding-bottom: 5rem;
+    padding-bottom: 15rem;
     color: var(--background-color);
     flex-direction: row;
 }
