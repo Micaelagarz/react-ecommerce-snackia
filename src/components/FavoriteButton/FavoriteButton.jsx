@@ -5,13 +5,15 @@ const FavoriteButton = () => {
 
     const [isFav, setIsFav] = useState(false);
 
-    const markAsFavorite = () => {
+    const markAsFavorite = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         setIsFav(!isFav);
     }
 
     return (
         <div className={style.buttonFav}>
-            <button className={style.buttonFav} onClick={markAsFavorite}>
+            <button type="button" className={style.buttonFav} onClick={markAsFavorite}>
                 {isFav ? '⭐' : '☆'}
             </button>
         </div>

@@ -3,6 +3,7 @@ import Footer from "./Footer/Footer";
 import PageHeader from "./PageHeader/PageHeader";
 import styles from "./Layout.module.css";
 import { useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const pageTitles = {
     "offers": "Offers",
@@ -18,7 +19,7 @@ export function Layout({ title, children }) {
             <Header />
             {currentTitle && <PageHeader title={currentTitle} />}
             <main className={styles.mainContent}>
-                {children}
+                <Outlet />
             </main>
             <Footer />
         </div>

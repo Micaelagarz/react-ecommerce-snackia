@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 import styles from './Header.module.css'
 import SearchBar from '../SearchBar/SearchBar';
-import CartBox from '../CartBox/CartBox';
+import Cart from '../Cart/Cart';
 import UserMenu from '../UserMenu/UserMenu';
 import Nav from './Nav';
 import Container from '../Container';
@@ -21,7 +21,7 @@ function Header() {
 
                     <div className={styles.userActions}>
                         <UserMenu />
-                        <CartBox />
+                        <Cart />
                     </div>
 
                     <Nav />
