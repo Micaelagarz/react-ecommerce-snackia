@@ -2,6 +2,9 @@ import ItemList from "./ItemList";
 import Container from "../Container";
 import { useState, useEffect } from "react";
 import PageHeader from "../PageHeader/PageHeader";
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase/config';
+import styles from "./ItemListContainer.module.css"
 
 const ItemListContainer = () => {
 
@@ -16,7 +19,31 @@ const ItemListContainer = () => {
     // 4. Use effect for load the products
     useEffect(() => {
 
-        fetch('/data/products.json')
+        const dbProducts = collection(db, "productos dietetica");
+
+        getDocs(dbProducts)
+            .then((response) => {
+
+                if (response.empty) {
+                    throw new Error('The products could not be loaded or the collection is empty.');
+                }
+
+
+                setProducts(
+                    response.docs.map((doc) => {
+                        return { ...doc.data(), id: doc.id }
+                    })
+                );
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => {
+                setLoading(false);
+            })
+
+
+        /*fetch('/data/products.json')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('The products could not be loaded.');
@@ -31,12 +58,19 @@ const ItemListContainer = () => {
             })
             .finally(() => {
                 setLoading(false);
-            });
+            });*/
     }, []);
-
+    console.log("Datos de Firebase:", products);
     //5. While the fetch does its job, we display something temporary. 
     if (loading) {
-        return <h2>Loading the Snackia catalog...</h2>
+        return (
+            <div className={styles.loadingProductsContainer}>
+                <h2>Loading the Snackia catalog...</h2>
+                <div className={styles.loader}></div>
+            </div>
+        )
+
+
     }
 
     if (error) {

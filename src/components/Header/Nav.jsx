@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 import FavoritesSection from '../FavoritesSection/FavoritesSection';
 import CategoriesMenu from '../CategoriesMenu/CategoriesMenu';
 import Container from '../Container';
-import { useCart } from '../../context/CartContext';
 
 const Nav = () => {
 
-    const { getCartQuantity } = useCart();
-    const totalItems = getCartQuantity();
+
 
     return (
         <Container>

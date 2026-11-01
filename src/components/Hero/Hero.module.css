@@ -55,7 +55,7 @@
     padding: 0.6rem 2.6rem;
     border: 0.2rem solid transparent;
     color: var(--primary-color);
-    border-radius: 2rem;
+    border-radius: var(--border-radius-xl);
     background-color: var(--yellow-color);
     font-size: 1.8rem;
     transition: 0.3s ease;

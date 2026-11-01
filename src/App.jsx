@@ -5,7 +5,7 @@ import ItemListContainer from './components/ItemList/ItemListContainer';
 import ContactDirectory from './components/ContactDirectory/ContactDirectory';
 import FormContainer from './components/ProductForm/FormContainer';
 import ProductDetail from './components/ItemList/ProductDetail';
-import Cart from './components/Cart/Cart';
+import CartView from './components/Cart/CartView';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
         <Route path="/contact" element={<ContactDirectory />} />
         <Route path="/add-product" element={<FormContainer />} />
         <Route path='/product/:id' element={<ProductDetail />} />
-        <Route path='/cart' element={<Cart />} />
+        <Route path='/cart-view' element={<CartView />} />
       </Route>
     </Routes>
 

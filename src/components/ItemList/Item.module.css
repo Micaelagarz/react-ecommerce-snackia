@@ -6,7 +6,7 @@
 
     background-color: var(--white-color);
     padding: 1rem 3rem;
-    border-radius: 1rem;
+    border-radius: var(--border-radius-md);
     cursor: pointer;
     box-shadow: 0 1rem 2rem var(--black-color);
 }
@@ -61,25 +61,4 @@
     color: inherit;
     display: flex;
     flex-direction: column;
-}
-
-.buttonContainer {
-    width: 100%;
-    border: 0.2rem solid var(--primary-color);
-    padding: 1rem;
-    border-radius: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    transition: all 0.2s ease;
-    font-size: 1.5rem;
-    color: var(--main-text);
-    cursor: pointer;
-    background-color: transparent;
-}
-
-.buttonContainer:hover {
-    background-color: var(--primary-color);
-    color: var(--white-color);
 }

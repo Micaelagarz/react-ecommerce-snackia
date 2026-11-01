@@ -19,6 +19,9 @@ html {
 
 :root {
   --white-color: #fff;
+  --grey-color: #414141;
+  --grey-light-color: #949494;
+  --line-color: #d8d8d8;
   --yellow-color: #ffb700;
   --gray-medium-color: rgb(194, 194, 194);
   --background-color: #F8F6F2;
@@ -28,6 +31,11 @@ html {
   --neutral-color: #e4edd1;
   --main-text: #282828;
   --complementary-color: #0E6B50;
+
+  --border-radius-md: 1rem;
+  /* standard size */
+  --border-radius-xl: 2.5rem;
+  /* extra-large size */
 }
 
 .container {
@@ -65,4 +73,25 @@ input {
 
 input:focus {
   outline: 3px solid var(--secondary-color);
+}
+
+.buttonContainer {
+  width: 100%;
+  border: 0.2rem solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+  font-size: 1.5rem;
+  color: var(--main-text);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.buttonContainer:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }

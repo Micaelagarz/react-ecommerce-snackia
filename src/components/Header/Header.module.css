@@ -62,18 +62,3 @@ header {
 .menuOpenButton {
     display: none;
 }
-
-.cartCounter {
-    position: absolute;
-    top: 2rem;
-    right: -0.8rem;
-    background-color: var(--yellow-color);
-    border-radius: 100%;
-    padding: 0.1rem 0.6rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-}
-
-.cartCounter.hidden {
-    display: none;
-}

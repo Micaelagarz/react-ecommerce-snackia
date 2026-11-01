@@ -8,7 +8,7 @@
         "highlightTag": "onSale",
         "category": "nuts",
         "thumbnail": "/images/products/almendras.jpg",
-        "description": "blablablablablabla",
+        "description": "Fuel your day with Snackia's Premium Almonds (100g). Packed with natural plant-based protein, fiber, and healthy fats, it’s the perfect on-the-go snack for clean, guilt-free energy.",
         "reviews": [
             {
                 "rating": 5,
@@ -21,12 +21,6 @@
                 "comment": "Great value for the price, will buy again.",
                 "date": "2026-07-22",
                 "reviewerName": "Mark Johnson"
-            },
-            {
-                "rating": 5,
-                "comment": "Perfect snack for the afternoon.",
-                "date": "2026-09-05",
-                "reviewerName": "Sarah Lee"
             }
         ]
     },
@@ -39,19 +33,13 @@
         "highlightTag": "onSale",
         "category": "groceries",
         "thumbnail": "/images/products/galletitas.jpg",
-        "description": "blablablablablabla",
+        "description": "Treat yourself to Snackia's Gluten-Free Cookies (150g). Crispy, delicious, and baked to perfection, they deliver classic, sweet flavor with zero gluten for a perfect worry-free snack.",
         "reviews": [
             {
                 "rating": 4,
                 "comment": "Very good cookies, perfect to share with some tea.",
                 "date": "2025-06-02",
                 "reviewerName": "Marta Benitez"
-            },
-            {
-                "rating": 5,
-                "comment": "My kids absolutely love these!",
-                "date": "2026-02-14",
-                "reviewerName": "Emily Davis"
             }
         ]
     },
@@ -64,25 +52,13 @@
         "highlightTag": "onSale",
         "category": "spreads",
         "thumbnail": "/images/products/pasta_mani.jpg",
-        "description": "blablablablablabla",
+        "description": "Power up with Snackia's Peanut Butter (380g). Rich, creamy, and packed with natural protein, it's the perfect delicious spread for your everyday snacks, smoothies, or straight from the spoon.",
         "reviews": [
             {
                 "rating": 5,
                 "comment": "The best peanut butter I've ever had.",
                 "date": "2026-03-24",
                 "reviewerName": "Sergio Oller"
-            },
-            {
-                "rating": 5,
-                "comment": "Very creamy and no added sugar, just perfect.",
-                "date": "2026-05-12",
-                "reviewerName": "Jessica Brown"
-            },
-            {
-                "rating": 4,
-                "comment": "Tastes amazing, but the jar arrived a bit dented.",
-                "date": "2026-10-02",
-                "reviewerName": "David Miller"
             }
         ]
     },
@@ -98,22 +74,10 @@
         "description": "Light walnut halves with a mild flavor.",
         "reviews": [
             {
-                "rating": 5,
-                "comment": "Very fresh, I always buy them.",
-                "date": "2026-04-10",
-                "reviewerName": "Carlos Pérez"
-            },
-            {
                 "rating": 4,
                 "comment": "Great for baking and adding to brownies.",
                 "date": "2026-06-15",
                 "reviewerName": "Anna Smith"
-            },
-            {
-                "rating": 4,
-                "comment": "Some pieces were broken, but the flavor is top notch.",
-                "date": "2026-09-20",
-                "reviewerName": "Robert Taylor"
             }
         ]
     },
@@ -152,12 +116,82 @@
                 "comment": "Unmissable new arrival, some of the best I've tried.",
                 "date": "2026-08-01",
                 "reviewerName": "Rocío Fernández"
-            },
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Olive Oil 500ml",
+        "price": 25.25,
+        "rating": 5,
+        "stock": 10,
+        "highlightTag": "newArrivals",
+        "category": "oils",
+        "thumbnail": "/images/products/aceite-oliva.jpg",
+        "description": "Extra virgin olive oil.",
+        "reviews": [
             {
                 "rating": 5,
-                "comment": "Very filling and crunchy. Highly recommended.",
-                "date": "2026-09-10",
-                "reviewerName": "Daniel Garcia"
+                "comment": "Excellent; I always use it for cooking.",
+                "date": "2026-08-01",
+                "reviewerName": "Mariela Garza"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "whole-wheat corkscrew pasta",
+        "price": 15.35,
+        "rating": 5,
+        "stock": 24,
+        "highlightTag": "newArrivals",
+        "category": "pasta",
+        "thumbnail": "/images/products/tirabuzones-integrales.jpg",
+        "description": "Natural, full-length ringlets.",
+        "reviews": [
+            {
+                "rating": 5,
+                "comment": "I loved them",
+                "date": "2026-08-01",
+                "reviewerName": "Rocío Fernández"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Brown Rice 500g",
+        "price": 17.25,
+        "rating": 5,
+        "stock": 8,
+        "highlightTag": "newArrivals",
+        "category": "cereals",
+        "thumbnail": "/images/products/arroz_integral.jpg",
+        "description": "Natural organic brown rice.",
+        "reviews": [
+            {
+                "rating": 5,
+                "comment": "I loved it, very delicious.",
+                "date": "2026-08-01",
+                "reviewerName": "Rocío Fernández"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Coconut oil 360ml",
+        "price": 28.25,
+        "rating": 5,
+        "stock": 15,
+        "highlightTag": "newArrivals",
+        "category": "oils",
+        "thumbnail": "/images/products/aceite_coco.jpg",
+        "description": "Enhance your recipes with this pure Coconut Oil (360ml). Versatile and rich in healthy fats, it's the perfect natural choice for baking, cooking, or your daily wellness routine.",
+        "reviews": [
+            {
+                "rating": 5,
+                "comment": "I loved it, very delicious.",
+                "date": "2026-08-01",
+                "reviewerName": "Rocío Fernández"
             }
         ]
     }

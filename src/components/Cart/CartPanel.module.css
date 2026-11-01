@@ -1,0 +1,113 @@
+.panelContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40rem;
+    height: 100%;
+    background-color: var(--white-color);
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.emptyCartContainer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.emptyCartMessage {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.viewProductsButton {
+    padding: 0.6rem 2.6rem;
+    border-radius: var(--border-radius-xl);
+    font-size: 1.8rem;
+    border: 0.2rem solid var(--primary-color);
+    transition: all 0.2s ease;
+    color: var(--main-text);
+    background-color: transparent;
+}
+
+.viewProductsButton:hover {
+    border: 0.2rem solid transparent;
+    color: var(--primary-color);
+    background-color: var(--yellow-color);
+    font-size: 1.8rem;
+    transition: 0.3s ease;
+}
+
+.addProdMessage {
+    font-size: 1.5rem;
+    color: var(--grey-color);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.panelContainer.open {
+    transform: translateX(0);
+}
+
+.panelHeader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productList {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    flex-grow: 1;
+    overflow-y: auto;
+
+}
+
+.cartListContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 2rem;
+
+}
+
+.cartListContainer h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.closeButton {
+    position: absolute;
+    bottom: -3rem;
+    right: 35rem;
+    background-color: transparent;
+    border: none;
+    color: var(--grey-color);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.panelFooter p {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    margin: 2rem;
+}

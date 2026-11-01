@@ -1,5 +1,5 @@
 import React, { useState, useContext, createContext } from 'react';
-
+import { useEffect } from 'react';
 //1. Creating the context
 const CartContext = createContext();
 
@@ -14,7 +14,17 @@ export const useCart = () => {
 }
 
 export const CartProvider = ({ children }) => { //The cart starts off empty.
-    const [cart, setCart] = useState([]);
+
+    const [cart, setCart] = useState(() => {
+        const savedCart = localStorage.getItem('cart');
+
+        return savedCart ? JSON.parse(savedCart) : [];
+    });
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
+
 
 
     const addToCart = (product, quantity) => {
@@ -34,6 +44,11 @@ export const CartProvider = ({ children }) => { //The cart starts off empty.
 
     }
 
+    const getCurrentQty = (id) => {
+        const item = cart.find(item => item.id === id);
+        return item ? item.quantity : 0;
+    }
+
     const clearCart = () => {
         setCart([]);
     }
@@ -43,11 +58,36 @@ export const CartProvider = ({ children }) => { //The cart starts off empty.
     };
 
     const getCartTotal = () => {
-        return cart.reduce((acc, item) => acc + item.precio * item.quantity, 0);
+        return cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    };
+
+    const updateQuantity = (id, amount) => {
+        setCart(prevCart =>
+            prevCart.map(item => {
+                if (item.id === id) {
+                    const newQuantity = item.quantity + amount;
+                    return { ...item, quantity: Math.max(1, newQuantity) };
+                }
+                return item;
+            })
+        )
+    }
+
+    const removeFromCart = (id) => {
+        setCart(prevCart => prevCart.filter(item => item.id !== id));
     };
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, clearCart, getCartQuantity, getCartTotal }}>
+        <CartContext.Provider value={{
+            cart,
+            addToCart,
+            clearCart,
+            getCartQuantity,
+            getCartTotal,
+            getCurrentQty,
+            updateQuantity,
+            removeFromCart
+        }}>
             {children}
         </CartContext.Provider>
     );

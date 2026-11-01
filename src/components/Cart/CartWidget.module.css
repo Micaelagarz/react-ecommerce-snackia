@@ -1,0 +1,43 @@
+.navIconBasket {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(--white-color);
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.totalItems {
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+    background-color: var(--yellow-color);
+    color: var(--secondary-color);
+    border-radius: 5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

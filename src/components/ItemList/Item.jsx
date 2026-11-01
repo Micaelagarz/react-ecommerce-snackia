@@ -17,13 +17,20 @@ export function Item({ product, onAddToCart }) {
 
                     <div className={style.infoContainer}>
                         <p>${product.price}</p>
-                        <StarRating rating={product.rating} reviewCount={product.reviews.length} />
+
+                        {product.rating ? (
+                            <StarRating
+                                rating={product.rating}
+                                reviewCount={product.reviews?.length || 0} />
+                        ) : null}
+
+
                     </div>
                 </div>
             </Link>
             <button
                 type="button"
-                className={style.buttonContainer}
+                className="buttonContainer"
                 onClick={(e) => {
                     e.stopPropagation();
                     onAddToCart(product, 1);

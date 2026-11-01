@@ -1,12 +1,11 @@
-.searchSection{
-    border-radius: 50%;
+.searchSection {
     display: flex;
     gap: 1rem;
 }
 
-.searchSection input{
+.searchSection input {
     width: 30rem;
-    border-radius: 50px;
+    border-radius: var(--border-radius-xl);
     background-color: var(--background-color);
     padding: 1rem 2rem;
     display: flex;
@@ -20,4 +19,4 @@
     color: var(--white-color);
     display: flex;
     flex-wrap: nowrap;
-    }
+}
