@@ -45,7 +45,7 @@ const CartPanel = ({ closePanel, isOpen }) => {
 
 
                         <div className={styles.panelFooter}>
-                            <p>Total: ${getCartTotal(cart)}</p>
+                            <p>Subtotal: ${getCartTotal(cart)}</p>
 
                             <Link className="buttonContainer"
                                 to="/cart-view" onClick={closePanel}>

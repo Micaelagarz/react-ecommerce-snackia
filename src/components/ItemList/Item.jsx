@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export function Item({ product, onAddToCart }) {
     return (
         <article className={style.itemContainer}>
-            <Link to={`/product/${product.id}`} className={style.linkDetail}>
+            <Link to={`/productos dietetica/${product.id}`} className={style.linkDetail}>
                 <div className={style.imgItemContainer}>
                     <FavoriteButton />
                     <img className={style.imgItem} src={product.thumbnail} alt={product.title} />
