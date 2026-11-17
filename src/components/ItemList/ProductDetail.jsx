@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { getDoc, doc } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 const ProductDetail = () => {
 
@@ -7,13 +9,21 @@ const ProductDetail = () => {
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        fetch('/data/products.json')
-            .then(response => response.json())
-            .then(data => {
-                const productFound = data.find(item => item.id === parseInt(id));
-                setProduct(productFound);
+
+        const productRef = doc(db, 'productos dietetica', id);
+
+        getDoc(productRef)
+            .then(snapshot => {
+                if (snapshot.exists()) {
+                    setProduct({ ...snapshot.data(), id: snapshot.id });
+                } else {
+                    setProduct(null);
+                }
             })
-            .catch(error => console.log("Error al cargar el producto:", error));
+            .catch(error => console.log("Error loading the product:", error))
+            .finally(() => {
+                setLoading(false);
+            })
 
     }, [id]);
 

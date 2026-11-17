@@ -1,46 +1,34 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSeedling } from '@fortawesome/free-solid-svg-icons';
-import styles from './Header.module.css'
-import SearchBar from '../SearchBar/SearchBar';
-import CartWidget from '../Cart/CartWidget';
-import UserMenu from '../UserMenu/UserMenu';
-import Nav from './Nav';
-import Container from '../Container';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSeedling } from "@fortawesome/free-solid-svg-icons";
+import styles from "./Header.module.css";
+import SearchBar from "../SearchBar/SearchBar";
+import CartWidget from "../Cart/CartWidget";
+import UserMenu from "../UserMenu/UserMenu";
+import Nav from "./Nav";
+import Container from "../Container";
 
 function Header() {
-    return (
-        <header>
-            <Container>
-                <div className={styles.headerTop}>
-                    <a href="#" className={styles.logo}>
-                        <FontAwesomeIcon icon={faSeedling} />
-                        <h2 className={styles.logoText}>Snackia</h2>
-                    </a>
+  return (
+    <header>
+      <Container>
+        <div className={styles.headerTop}>
+          <a href="#" className={styles.logo}>
+            <FontAwesomeIcon icon={faSeedling} />
+            <h2 className={styles.logoText}>Snackia</h2>
+          </a>
 
-                    <SearchBar />
+          <SearchBar />
 
-                    <div className={styles.userActions}>
-                        <UserMenu />
-                        <CartWidget />
-                    </div>
+          <div className={styles.userActions}>
+            <UserMenu />
+            <CartWidget />
+          </div>
 
-                    <Nav />
-
-                </div>
-
-                {/*<div className={styles.shippinAddressHeader}>
-                    <div className={styles.locationIcon}>
-                        <FontAwesomeIcon icon={faLocationDot} className={styles.locationDot} />
-                    </div>
-                    <div className={styles.locationInfo}>
-                        <p>Enviar a García</p>
-                        <p>Calle Indenpendencia 30</p>
-                    </div>
-                </div>*/}
-            </Container>
-        </header>
-
-    );
+          <Nav />
+        </div>
+      </Container>
+    </header>
+  );
 }
 
 export default Header;

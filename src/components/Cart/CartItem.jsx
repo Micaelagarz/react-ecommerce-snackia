@@ -8,7 +8,6 @@ import styles from './CartItem.module.css';
 
 const CartItem = ({ item, variant = 'panel' }) => {
     const { updateQuantity, removeFromCart } = useCart();
-    const subtotal = item.price * item.quantity;
 
     // we determine which class to apply dynamically based on the variant
     const variantClass = styles[variant];
@@ -32,11 +31,10 @@ const CartItem = ({ item, variant = 'panel' }) => {
                     </button>
                 </div>
 
-                <span className={styles.cartItemPrice}> Unit price: ${item.price} </span>
+
 
                 <div className={styles.bottomRow}>
-                    <span className={styles.cartItemQuantity}> Subtotal: ${subtotal} </span>
-
+                    <span className={styles.cartItemPrice}> ${item.price} </span>
                     <div className={styles.quantityControls}>
 
                         <button onClick={() => updateQuantity(item.id, -1)}>

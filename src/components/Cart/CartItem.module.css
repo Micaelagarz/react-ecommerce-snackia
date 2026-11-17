@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 0.5rem 2rem 0 0;
+    padding: 0.5rem 2rem 0.5rem 0;
     border-bottom: 1px solid var(--line-color);
+
 }
 
 .content {
@@ -18,12 +19,14 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .bottomRow {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 .itemBase img {
@@ -38,7 +41,7 @@
     border-radius: 2.5rem;
     border: 1px solid var(--grey-light-color);
     padding: 0.2rem 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
 .controlButtons {
@@ -55,7 +58,7 @@
 }
 
 .cartItemTitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .cartItemQuantity {
