@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-.headerBottom li a {
+.itemNav {
     padding: 0.5rem 1.8rem;
     font-size: 1.5rem;
     border-radius: var(--border-radius-xl);
@@ -14,7 +14,7 @@
     white-space: nowrap;
 }
 
-.headerBottom li a:hover {
+.itemNav:hover {
     color: var(--primary-color);
     background-color: var(--yellow-color);
 }

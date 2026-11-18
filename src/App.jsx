@@ -24,6 +24,7 @@ function App() {
         <Route path="/cart-view" element={<CartView />} />
         <Route path="/login" element={<LoginContainer />} />
         <Route path="/register" element={<RegisterContainer />} />
+        <Route path="/category/:categoryId" element={<ItemListContainer />} />
         <Route
           path="/management"
           element={

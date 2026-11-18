@@ -1,6 +1,5 @@
 import styles from "./Nav.module.css";
 import { Link } from "react-router-dom";
-import FavoritesSection from "../FavoritesList/FavoritesList";
 import CategoriesMenu from "../CategoriesMenu/CategoriesMenu";
 import Container from "../Container";
 
@@ -15,19 +14,24 @@ const Nav = () => {
         <ul className={styles.navHeader}>
           <CategoriesMenu />
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"
+            className={styles.itemNav}>Home</Link>
           </li>
           <li>
-            <Link to="/offers">Offers</Link>
+            <Link to="/offers"
+            className={styles.itemNav}>Offers</Link>
           </li>
           <li>
-            <Link to="/reviews">Reviews</Link>
+            <Link to="/reviews"
+            className={styles.itemNav}>Reviews</Link>
           </li>
           <li>
-            <Link to="/contact">Contact us</Link>
+            <Link to="/contact"
+            className={styles.itemNav}>Contact us</Link>
           </li>
           <li>
-            <Link to="/about-us">About us</Link>
+            <Link to="/about-us"
+            className={styles.itemNav}>About us</Link>
           </li>
         </ul>
       </nav>
