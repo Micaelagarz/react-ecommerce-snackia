@@ -1,24 +1,23 @@
-import style from "./FavoriteButton.module.css"
-import { useState } from "react";
+import style from "./FavoriteButton.module.css";
+import { useFavorites } from "../../context/FavoritesContext";
 
-const FavoriteButton = () => {
+const FavoriteButton = ({ product }) => {
+  const { toggleFavorite, isFavorite } = useFavorites();
+  const isFav = isFavorite(product.id);
 
-    const [isFav, setIsFav] = useState(false);
+  const markAsFavorite = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleFavorite(product);
+  };
 
-    const markAsFavorite = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        setIsFav(!isFav);
-    }
-
-    return (
-        <div className={style.buttonFav}>
-            <button type="button" className={style.buttonFav} onClick={markAsFavorite}>
-                {isFav ? '⭐' : '☆'}
-            </button>
-        </div>
-
-    );
-}
+  return (
+    <div className={style.buttonFav}>
+      <button type="button" onClick={markAsFavorite}>
+        {isFav ? "⭐" : "☆"}
+      </button>
+    </div>
+  );
+};
 
 export default FavoriteButton;

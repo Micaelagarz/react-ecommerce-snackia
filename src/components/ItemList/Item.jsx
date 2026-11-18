@@ -1,45 +1,51 @@
 import style from "./Item.module.css";
 import StarRating from "../StarRating/StarRating";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export function Item({ product, onAddToCart }) {
-    return (
-        <article className={style.itemContainer}>
-            <Link to={`/productos dietetica/${product.id}`} className={style.linkDetail}>
-                <div className={style.imgItemContainer}>
-                    <FavoriteButton />
-                    <img className={style.imgItem} src={product.thumbnail} alt={product.title} />
-                </div>
+  return (
+    <article className={style.itemContainer}>
+      <Link
+        to={`/productos-dietetica/${product.id}`}
+        className={style.linkDetail}
+      >
+        <div className={style.imgItemContainer}>
+          <FavoriteButton product={product} />
+          <img
+            className={style.imgItem}
+            src={product.thumbnail}
+            alt={product.title}
+          />
+        </div>
 
-                <div className={style.contentItemContainer}>
-                    <h3>{product.title}</h3>
+        <div className={style.contentItemContainer}>
+          <h3>{product.title}</h3>
 
-                    <div className={style.infoContainer}>
-                        <p>${product.price}</p>
+          <div className={style.infoContainer}>
+            <p>${product.price}</p>
 
-                        {product.rating ? (
-                            <StarRating
-                                rating={product.rating}
-                                reviewCount={product.reviews?.length || 0} />
-                        ) : null}
-
-
-                    </div>
-                </div>
-            </Link>
-            <button
-                type="button"
-                className="buttonContainer"
-                onClick={(e) => {
-                    e.stopPropagation();
-                    onAddToCart(product, 1);
-                }}
-            >
-                Add to cart
-            </button>
-        </article>
-    );
+            {product.rating ? (
+              <StarRating
+                rating={product.rating}
+                reviewCount={product.reviews?.length || 0}
+              />
+            ) : null}
+          </div>
+        </div>
+      </Link>
+      <button
+        type="button"
+        className="buttonContainer"
+        onClick={(e) => {
+          e.stopPropagation();
+          onAddToCart(product, 1);
+        }}
+      >
+        Add to cart
+      </button>
+    </article>
+  );
 }
 
 export default Item;

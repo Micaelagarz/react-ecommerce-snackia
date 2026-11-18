@@ -97,13 +97,22 @@ const UserMenu = () => {
                   Product management
                 </Link>
               ) : (
-                <Link
-                  to="/mis-compras"
-                  className={styles.dropdownItem}
-                  onClick={() => setIsOpen(false)}
-                >
-                  My purchases
-                </Link>
+                <>
+                  <Link
+                    to="/mis-compras"
+                    className={styles.dropdownItem}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    My purchases
+                  </Link>
+                  <Link
+                    to="/favorites"
+                    className={styles.dropdownItem}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Favorites
+                  </Link>
+                </>
               )}
 
               <button

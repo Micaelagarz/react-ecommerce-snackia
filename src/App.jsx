@@ -10,12 +10,13 @@ import LoginContainer from "./components/Login/LoginContainer";
 import RegisterContainer from "./components/Register/RegisterContainer";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Profile from "./components/Profile/Profile";
+import Favorites from "./components/FavoritesList/FavoritesList";
 
 function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/productos dietetica/:id" element={<ProductDetail />} />
+        <Route path="/productos-dietetica/:id" element={<ProductDetail />} />
         <Route path="/" element={<Home />} />
         <Route path="/offers" element={<ItemListContainer />} />
         <Route path="/contact" element={<ContactDirectory />} />
@@ -31,15 +32,23 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/favorites"
+          element={
+            <ProtectedRoute>
+              <Favorites />
+            </ProtectedRoute>
+          }
+        />
       </Route>
-      <Route
-        path="/profile"
-        element={
-          <ProtectedRoute>
-            <Profile />
-          </ProtectedRoute>
-        }
-      />
     </Routes>
   );
 }

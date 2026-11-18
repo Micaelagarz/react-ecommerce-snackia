@@ -1,6 +1,6 @@
 import styles from "./Nav.module.css";
 import { Link } from "react-router-dom";
-import FavoritesSection from "../FavoritesSection/FavoritesSection";
+import FavoritesSection from "../FavoritesList/FavoritesList";
 import CategoriesMenu from "../CategoriesMenu/CategoriesMenu";
 import Container from "../Container";
 
@@ -8,7 +8,6 @@ const Nav = () => {
   return (
     <Container>
       <nav className={`container ${styles.headerBottom}`}>
-        <FavoritesSection />
         {/*central navigation menu*/}
         {/*<button className={styles.menuOpenButton}>
                 <FontAwesomeIcon icon={faBars} />
