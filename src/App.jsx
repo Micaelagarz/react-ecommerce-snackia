@@ -8,6 +8,7 @@ import CartView from "./components/Cart/CartView";
 import Management from "./components/Management/Management";
 import LoginContainer from "./components/Login/LoginContainer";
 import RegisterContainer from "./components/Register/RegisterContainer";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 function App() {
   return (
@@ -19,9 +20,16 @@ function App() {
         <Route path="/contact" element={<ContactDirectory />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart-view" element={<CartView />} />
-        <Route path="/management" element={<Management />} />
         <Route path="/login" element={<LoginContainer />} />
         <Route path="/register" element={<RegisterContainer />} />
+        <Route
+          path="/management"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <Management />
+            </ProtectedRoute>
+          }
+        />
       </Route>
     </Routes>
   );
