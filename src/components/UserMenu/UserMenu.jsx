@@ -87,7 +87,7 @@ const UserMenu = () => {
                 {user.email}
               </p>
               <hr className={styles.divider} />
-
+              <Link to="/profile">My Profile</Link>
               {user.rol === "admin" ? (
                 <Link
                   to="/management"

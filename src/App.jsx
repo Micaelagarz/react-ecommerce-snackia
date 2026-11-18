@@ -9,6 +9,7 @@ import Management from "./components/Management/Management";
 import LoginContainer from "./components/Login/LoginContainer";
 import RegisterContainer from "./components/Register/RegisterContainer";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -31,6 +32,14 @@ function App() {
           }
         />
       </Route>
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }
