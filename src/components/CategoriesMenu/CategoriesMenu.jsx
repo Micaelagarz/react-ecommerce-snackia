@@ -32,21 +32,23 @@ const CategoriesMenu = () => {
         />
       </div>
 
-      {isOpen && (
-        <ul className={styles.dropDownList}>
-          {CATEGORIES.map((category) => (
-            <li key={category.id}>
-              <Link
-                to={`/category/${category.id}`}
-                className={styles.category}
-                onClick={() => setIsOpen(false)}
-              >
-                {category.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+     <div className={styles.dropDownWrapper}>
+        <div className={styles.dropDownClip}>
+          <ul className={`${styles.dropDownList} ${isOpen ? styles.open : ""}`}>
+            {CATEGORIES.map((category) => (
+              <li key={category.id}>
+                <Link
+                  to={`/category/${category.id}`}
+                  className={styles.category}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {category.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
