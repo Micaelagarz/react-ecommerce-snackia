@@ -1,39 +1,44 @@
 import { Link } from "react-router-dom";
+import styles from "./LoginForm.module.css";
 
 const LoginForm = ({ register, handleSubmit, errors }) => {
   return (
-    <div>
+    <div className={`${styles.logInContainer} container`}>
       <h2> Login </h2>
       <form onSubmit={handleSubmit}>
-        <label>Enter your email</label>
-        <input
-          type="email"
-          placeholder="e.g. name@example.com"
-          {...register("email", {
-            required: {
-              value: true,
-              message: "You must enter an email address",
-            },
-            pattern: {
-              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-              message: "Please, enter a valid email format.",
-            },
-          })}
-        />
-        {errors.email && <span>{errors.email.message}</span>}
+        <div className={styles.inputSection}>
+          <label>Enter your email</label>
+          <input
+            type="email"
+            placeholder="e.g. name@example.com"
+            {...register("email", {
+              required: {
+                value: true,
+                message: "You must enter an email address",
+              },
+              pattern: {
+                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                message: "Please, enter a valid email format.",
+              },
+            })}
+          />
+          {errors.email && <span>{errors.email.message}</span>}
+        </div>
 
-        <label>Enter your password</label>
-        <input
-          type="password"
-          placeholder="********"
-          {...register("password", {
-            required: {
-              value: true,
-              message: "The password is required.",
-            },
-          })}
-        />
-        {errors.password && <span>{errors.password.message}</span>}
+        <div className={styles.inputSection}>
+          <label>Enter your password</label>
+          <input
+            type="password"
+            placeholder="********"
+            {...register("password", {
+              required: {
+                value: true,
+                message: "The password is required.",
+              },
+            })}
+          />
+          {errors.password && <span>{errors.password.message}</span>}
+        </div>
 
         <button type="submit">Log in</button>
 

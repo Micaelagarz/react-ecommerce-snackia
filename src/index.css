@@ -34,9 +34,10 @@ html {
   --complementary-color: #0E6B50;
 
   --border-radius-md: 1rem;
-  /* standard size */
   --border-radius-xl: 2.5rem;
-  /* extra-large size */
+
+  --box-shadow-card: -5px 0px 15px rgba(0, 0, 0, 0.1);
+ 
 }
 
 .container {

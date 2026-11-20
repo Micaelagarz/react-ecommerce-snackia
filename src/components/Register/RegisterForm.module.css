@@ -1,0 +1,124 @@
+.registerContainer {
+  width: 100%;
+  max-width: 50rem;
+  margin: 5rem auto;
+  background-color: var(--white-color);
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 3.5rem 3rem;
+}
+
+.registerContainer h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.groupForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupForm label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--main-text);
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.groupForm label:first-of-type {
+  margin-top: 0;
+}
+
+.groupForm input {
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.5rem;
+  color: var(--main-text);
+  background-color: #f9f9f7;
+  border: 0.15rem solid #dcdcdc;
+  border-radius: var(--border-radius-xl);
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.groupForm input::placeholder {
+  color: #9e9e9e;
+}
+
+.groupForm input:focus {
+  background-color: var(--white-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(32, 106, 117, 0.15);
+}
+
+/* Mensajes de validación por campo */
+.groupForm span {
+  font-size: 1.3rem;
+  color: #d93025;
+  margin-top: 0.5rem;
+  padding-left: 0.8rem;
+  line-height: 1.4;
+}
+
+/* Destacado sutil para errores generales de Firebase */
+.firebaseError {
+  margin-top: 1.4rem;
+  padding: 1rem 1.2rem;
+  background-color: #fdecea;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+
+.groupForm button[type="submit"] {
+  margin-top: 2.2rem;
+  width: 100%;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius-xl);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.15s ease;
+}
+
+.groupForm button[type="submit"]:hover {
+  background-color: var(--yellow-color);
+  color: var(--primary-color);
+}
+
+.groupForm button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+.groupForm p {
+  margin-top: 2.2rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid #eeeeee;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--main-text);
+}
+
+.groupForm a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.groupForm a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}

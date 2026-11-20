@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import styles from "./RegisterForm.module.css";
 
 const RegisterForm = ({
   register,
@@ -8,10 +9,10 @@ const RegisterForm = ({
   firebaseError,
 }) => {
   return (
-    <div className="registerContainer">
+    <div className={`${styles.registerContainer} container`}>
       <h2>Create a new account</h2>
       <form onSubmit={handleSubmit}>
-        <div className="groupForm">
+        <div className={styles.groupForm}>
           <label>Enter your email address</label>
           <input
             type="email"
@@ -65,7 +66,9 @@ const RegisterForm = ({
             <span>{errors.confirmPassword.message}</span>
           )}
 
-          {firebaseError && <span>{firebaseError}</span>}
+          {firebaseError && (
+            <span className={styles.firebaseError}>{firebaseError}</span>
+          )}
 
           <button type="submit">Sign up</button>
           <p>
