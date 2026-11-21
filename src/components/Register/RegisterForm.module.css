@@ -3,15 +3,15 @@
   max-width: 50rem;
   margin: 5rem auto;
   background-color: var(--white-color);
-  border-radius: 1.2rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: var(--border-radius-md);
+  box-shadow: var( --box-shadow-card);
   padding: 3.5rem 3rem;
 }
 
 .registerContainer h2 {
   font-size: 2.6rem;
   font-weight: 600;
-  color: var(--primary-color);
+   color: var(--main-text);  
   text-align: center;
   margin-bottom: 2.5rem;
 }
@@ -38,8 +38,8 @@
   padding: 1.2rem 1.6rem;
   font-size: 1.5rem;
   color: var(--main-text);
-  background-color: #f9f9f7;
-  border: 0.15rem solid #dcdcdc;
+  background-color: var(--background-color);
+  border: 0.15rem solid var(--line-color);
   border-radius: var(--border-radius-xl);
   outline: none;
   transition:
@@ -49,7 +49,7 @@
 }
 
 .groupForm input::placeholder {
-  color: #9e9e9e;
+  color:  var(--grey-light-color);
 }
 
 .groupForm input:focus {
@@ -105,7 +105,7 @@
 .groupForm p {
   margin-top: 2.2rem;
   padding-top: 1.8rem;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid var(--line-color);
   text-align: center;
   font-size: 1.4rem;
   color: var(--main-text);

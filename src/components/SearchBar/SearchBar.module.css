@@ -10,7 +10,13 @@
     padding: 1rem 2rem;
     display: flex;
     gap: 1rem;
+    outline: none;
+    border: 0.15rem solid var(--line-color);
     cursor: text;
+    transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .magnifyingGlass {
@@ -19,4 +25,10 @@
     color: var(--white-color);
     display: flex;
     flex-wrap: nowrap;
+}
+
+.searchSection input:focus{
+     background-color: var(--white-color);
+  border-color: var(--focus-color);
+  box-shadow: 0 0 0 3px rgba(64, 228, 209, 0.195);
 }
