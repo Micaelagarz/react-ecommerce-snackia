@@ -8,7 +8,6 @@ import {
     signInWithEmailAndPassword
 } from "firebase/auth";
 
-
 //1. Create the context
 export const AuthContext = createContext();
 
@@ -25,28 +24,47 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [initialLoading, setInitialLoading] = useState(true); 
+    const [loading, setLoading] = useState(false); 
+
     const auth = getAuth(); // We obtain the auth instance only once
     const db = getFirestore(); // We initialize Firestore
 
     // Function to register a new user
-    const signup = (email, password) => {
-        return createUserWithEmailAndPassword(auth, email, password);
+   const signup = async (email, password) => {
+    setLoading(true);
+    try {
+        return await createUserWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+        setLoading(false);
+        throw error;
     }
+};
 
-    // Function to log in
-    const login = (email, password) => {
-        return signInWithEmailAndPassword(auth, email, password);
+const login = async (email, password) => {
+    setLoading(true);
+    try {
+        return await signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+        setLoading(false);
+        throw error;
     }
+};
 
-    // Function to log out
-    const logout = () => {
-        return signOut(auth);
+const logout = async () => {
+    setLoading(true);
+    try {
+        await signOut(auth);
+    } finally {
+        setLoading(false);
     }
+};
 
     useEffect(() => {
 
         const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+           setLoading(true); // <--- AGREGAR ESTA LÍNEA
+        try {
             if (currentUser) {
                 const userDocRef = doc(db, "users", currentUser.uid);
                 const userDocSnap = await getDoc(userDocRef);
@@ -59,9 +77,11 @@ export const AuthProvider = ({ children }) => {
             } else {
                 setUser(null);
             }
-
+        } finally {
             setLoading(false);
-        });
+            setInitialLoading(false); // <--- AGREGAR ESTA LÍNEA
+        }
+    });
 
         return () => unsubscribe();
     }, [auth, db]);
@@ -75,10 +95,10 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={value}>
-            {!loading && children}
-        </AuthContext.Provider>
-    );
+    <AuthContext.Provider value={value}>
+        {!initialLoading && children}
+    </AuthContext.Provider>
+);
 
 
 }

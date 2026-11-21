@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 const UserMenu = () => {
-  const { user, logout } = useAuth();
+  const { user, loading, logout } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -25,7 +25,7 @@ const UserMenu = () => {
       await logout();
       setIsOpen(false);
     } catch (error) {
-      console.error("Unable to log in:", error);
+      console.error("Unable to log out:", error);
     }
   };
 
@@ -42,13 +42,15 @@ const UserMenu = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <FontAwesomeIcon icon={faUser} />
-        <p className={styles.userText}>
-          {user
-            ? user.rol === "admin"
-              ? "Admin"
-              : "My account"
-            : "My account"}
-        </p>
+        <div className={styles.userLabelSlot}>
+          {loading ? (
+            <span className={styles.miniLoader}></span>
+          ) : (
+            <p className={styles.userText}>
+              {user?.rol === "admin" ? "Admin" : "My account"}
+            </p>
+          )}
+        </div>
         <FontAwesomeIcon
           icon={faAngleDown}
           className={`${styles.iconAngle} ${isOpen ? styles.rotate : ""}`}
@@ -58,7 +60,11 @@ const UserMenu = () => {
       <div className={`${styles.dropdownWrapper} ${isOpen ? styles.open : ""}`}>
         <div className={styles.dropDownClip}>
           <div className={`${styles.dropdown} ${isOpen ? styles.open : ""}`}>
-            {!user ? (
+            {loading ? (
+              <div className={styles.loaderContainer}>
+                <div className={styles.loader}></div>
+              </div>
+            ) : !user ? (
               /* Guest view (not logged in) */
               <div className={styles.guestContent}>
                 <p className={styles.dropdownTitle}>Already have an account?</p>
@@ -88,7 +94,11 @@ const UserMenu = () => {
                   {user.email}
                 </p>
                 <hr className={styles.divider} />
-                <Link to="/profile" onClick={() => setIsOpen(false)}>
+                <Link
+                  to="/profile"
+                  className={styles.dropdownItem}
+                  onClick={() => setIsOpen(false)}
+                >
                   My Profile
                 </Link>
                 {user.rol === "admin" ? (
